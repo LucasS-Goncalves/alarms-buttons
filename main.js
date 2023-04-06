@@ -1,5 +1,5 @@
-function playAlarm (audio) {
-    document.getElementById(audio).play()
+function playAlarm (audioId) {
+    document.getElementById(audioId).play()
 };
 
 const buttons = document.querySelectorAll("button");

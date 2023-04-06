@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+         tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily :{
+                       Nunito: ['Nunito', 'sans-serif'],
+                    },
+                    colors:{
+                        BodyRight: '#213a4f',
+                        BodyLeft: '#55a19e',
+                        Button: '#0f3947',
+                        Gray:'#808080',
+                        Section: '#0c2336',
+                        ButtonActive: '#55a19e',
+                    },
+                    boxShadow: {
+                        buttonShadow: '2px 2px 5px 1px black',
+                        sectionShadow: '12px 12px 5px 10px #000710',
+                        activeButton: 'inset 4px 4px 10px 0px black',
+                    },
+                },
+            },
+        };
+    </script>
+    <title>Alarms</title>
+</head>
+<body class="min-h-screen font-Nunito flex flex-col justify-center items-center my-8 bg-gradient-to-r from-BodyRight to-BodyLeft lg:my-2">
+    <h1 class="text-3xl text-center p-4 mb-4 text-white">What's the best alarm clock to wake up to?</h1>
+    <section class="bg-Section grid grid-cols-1 gap-4 mb-8 py-20 w-4/6 rounded-2xl shadow-sectionShadow sm:w-3/6 lg:w-4/6 lg:grid-cols-3 lg:px-28 lg:py-8 2xl:w-3/6">
+        <button class="button_buzzing w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">BUZZING</button>
+        <button class="button_car w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">CAR ALARM</button>
+        <button class="button_chaos w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">CHAOS</button>
+
+        <button class="button_pulsing w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">PULSING WARNING</button>
+        <button class="button_rapid w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">RAPID BUZZING</button>
+        <button class="button_beeps w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">SHORT CONSTANT BEEPS</button>
+
+        <button class="button_yelps w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">SLOW YELPS</button>
+        <button class="button_tech w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">TECH</button>
+        <button class="button_whooper w-32 h-32 text-xl shadow-buttonShadow active:bg-ButtonActive active:border active:shadow-activeButton rounded-3xl m-auto bg-Button text-white">WHOOPER</button>
+    </section>
+
+    <audio src="sounds/buzzingreverb-alarm-done.mp3" id="sound_button_buzzing"></audio>
+    <audio src="sounds/car-alarm-done.mp3" id="sound_button_car"></audio>
+    <audio src="sounds/chaos-alarm-done.mp3" id="sound_button_chaos"></audio>    
+    <audio src="sounds/pulsingwarning-alarm-done.mp3" id="sound_button_pulsing"></audio>
+    <audio src="sounds/rapidbuzzing-alarm-done.mp3" id="sound_button_rapid"></audio>
+    <audio src="sounds/shortconstantbeeps-alarm-done.mp3" id="sound_button_beeps"></audio>
+    <audio src="sounds/slow-yelps-alarm-done.mp3" id="sound_button_yelps"></audio>
+    <audio src="sounds/tech-alarm-done.mp3" id="sound_button_tech"></audio>
+    <audio src="sounds/whooper-alarm-done.mp3" id="sound_button_whooper"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
